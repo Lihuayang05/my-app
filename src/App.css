@@ -36,7 +36,8 @@
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%; /* Center the logo horizontally */
+  transform: translate(-50%, -50%); /* Center the logo vertically and horizontally */
   transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   object-fit: cover;
@@ -45,7 +46,7 @@
 }
 
 .logo:hover {
-  transform: translateY(-50%) scale(1.05);
+  transform: translate(-50%, -50%) scale(1.05);
   opacity: 0.9;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
@@ -169,8 +170,8 @@
   }
 
   .logo {
-    height: 100px;
-    width: 100px;
+    height: 80px; /* Reduced logo size for small screens */
+    width: 80px;
   }
 
   .box {
