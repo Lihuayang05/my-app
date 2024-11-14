@@ -19,7 +19,7 @@ function App() {
   };
 
   const groups = [
-    { name: '天鹰', animal: 'tianying.png', color: 'red', spirit: '天高地广，无畏飞翔。' },
+    { name: '天鹰', animal: 'tianying.png', color: 'darkred', spirit: '天高地广，无畏飞翔。' },
     { name: '凌鹰', animal: 'lingying.png', color: 'green', spirit: '凌空飞翔，勇攀高峰。' },
     { name: '群鹰', animal: 'qunying.jpeg', color: 'blue', spirit: '群策群力，飞向未来。' },
     { name: '锐鹰', animal: 'ruiying.png', color: 'gold', spirit: '锐不可当，势不可挡。' }
