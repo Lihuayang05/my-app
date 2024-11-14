@@ -4,12 +4,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh; /* Changed from height: 100vh to min-height for better scrolling */
   font-family: 'Arial', sans-serif;
   background-color: #f3e8e0;
   color: #894700;
   padding: 20px;
-  overflow: hidden;
+  overflow: auto; /* Ensures scrolling works */
   position: relative;
   animation: fadeIn 2s ease-out; 
   transition: background-color 0.5s ease;
@@ -38,9 +38,10 @@
   top: 50%;
   transform: translateY(-50%);
   transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   object-fit: cover;
-  animation: logoFadeIn 2s ease-out; 
+  animation: logoFadeIn 2s ease-out;
+  max-width: 120px; /* Ensure logo doesn't become too large on mobile */
 }
 
 .logo:hover {
@@ -61,7 +62,7 @@
   opacity: 0;
   animation: gridFadeIn 2s ease-out forwards;
   animation-delay: 1s;
-  padding: 0 20px; /* Add padding to prevent edge crowding */
+  padding: 0 20px;
 }
 
 /* Box Style */
@@ -86,7 +87,7 @@
 .box:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9; /* Subtle change on hover */
+  background-color: #f9f9f9;
 }
 
 /* Button Style */
@@ -100,7 +101,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   text-transform: uppercase;
-  letter-spacing: 1px; /* Added slight letter spacing for readability */
+  letter-spacing: 1px;
 }
 
 .box button:hover {
@@ -119,7 +120,7 @@
 }
 
 .animal-image:hover {
-  transform: scale(1.05); /* Slight zoom-in on hover */
+  transform: scale(1.05);
 }
 
 /* Fade-in Animations */
@@ -164,19 +165,24 @@
 /* Responsive Adjustments for Smaller Screens */
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
   }
 
   .logo {
-    height: 100px; 
+    height: 100px;
+    width: 100px;
   }
 
   .box {
     max-width: 250px;
-    padding: 20px; 
+    padding: 20px;
   }
 
   .animal-image {
     width: 80px;
+  }
+
+  .app {
+    padding: 10px; /* Reduced padding on small screens */
   }
 }
